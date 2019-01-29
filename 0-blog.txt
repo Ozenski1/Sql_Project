@@ -1,0 +1,33 @@
+CREATE TABLE `users` (
+	`id` INTEGER PRIMARY KEY AUTOINCREMENT, 
+	`name` TEXT
+);
+
+CREATE TABLE `articles` (
+	`id` INTEGER PRIMARY KEY AUTOINCREMENT,
+	`user_id` INTEGER,
+	`name` TEXT
+);
+
+CREATE TABLE `categories` (
+	`id` INTEGER PRIMARY KEY AUTOINCREMENT,  
+	`title` TEXT
+);
+
+CREATE TABLE `tags` (
+	`id` INTEGER PRIMARY KEY AUTOINCREMENT, 
+	`title` TEXT,
+	`color` TEXT
+);
+
+CREATE TABLE `article_categories` (
+	`id` INTEGER PRIMARY KEY AUTOINCREMENT,
+	`article_id` INTEGER,
+	`category_id` INTEGER
+);
+
+CREATE TABLE `categories_tags` (
+	`id` INTEGER PRIMARY KEY AUTOINCREMENT,
+	`category_id` INTEGER,
+	`tag_id` INTEGER	
+);
